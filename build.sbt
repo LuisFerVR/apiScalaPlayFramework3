@@ -16,10 +16,6 @@ libraryDependencies ++= Seq(
   "org.playframework" %% "play-slick-evolutions" % "6.1.0",
   // Librería de la base de datos a utilizar, en este caso, la conexión se busca realizar con Postgres
   "org.postgresql" % "postgresql" % "42.7.3",
-
-  // Dependencias de Play y Play JSON
-  "com.typesafe.play" %% "play" % "3.0.5",
-  "com.typesafe.play" %% "play-json" % "3.0.5",
 )
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"

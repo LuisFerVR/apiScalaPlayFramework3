@@ -6,8 +6,26 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
 
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file               controllers.Assets.versioned(path: String = "/assets", file: Asset)
 
-#Test API
-GET /hello controllers.HomeController.Hello
+
+# Rutas para el CRUD de Equipos
+GET   /equipos                      controllers.EquipoController.getEquipos
+GET   /equipos/:id                  controllers.EquipoController.getEquipo(id: Int)
+POST  /equipos                      controllers.EquipoController.createEquipo
+PUT   /equipos/:id                  controllers.EquipoController.updateEquipo(id: Int)
+DELETE /equipos/:id                 controllers.EquipoController.deleteEquipo(id: Int)
+
+# Rutas para el CRUD de Torneos
+GET   /torneos                      controllers.TorneoController.getTorneos
+GET   /torneos/:id                  controllers.TorneoController.getTorneo(id: Int)
+POST  /torneos                      controllers.TorneoController.createTorneo
+PUT   /torneos/:id                  controllers.TorneoController.updateTorneo(id: Int)
+DELETE /torneos/:id                 controllers.TorneoController.deleteTorneo(id: Int)
+
+# Rutas para el CRUD de Jugadores
+GET   /jugadores                    controllers.JugadorController.getJugadores
+GET   /jugadores/:id                controllers.JugadorController.getJugador(id: Int)
+POST  /jugadores                    controllers.JugadorController.createJugador
+PUT   /jugadores/:id                controllers.JugadorController.updateJugador(id: Int)
+DELETE /jugadores/:id               controllers.JugadorController.deleteJugador(id: Int)
